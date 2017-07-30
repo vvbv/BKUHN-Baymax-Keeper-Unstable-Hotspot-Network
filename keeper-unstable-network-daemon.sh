@@ -7,7 +7,6 @@ do
 	if [ $? -eq 0 ]
 	then
 		echo "Conected"
-		echo "--[New check in 120 seconds]"
 	else
 		echo "Disconected"
 		echo "--[Restarting Network-Manager]"
@@ -15,7 +14,7 @@ do
 		nmcli radio wifi off>/dev/null
 		nmcli radio wifi on>/dev/null
 		echo "--[Restarting Network-Manager completed]"
-		echo "--[New check in 120 seconds]"
 	fi
+	echo "--[New check in 120 seconds]"
 	sleep 120s>/dev/null
 done
