@@ -14,6 +14,8 @@ do
 		service network-manager restart>/dev/null
 		nmcli radio wifi off>/dev/null
 		nmcli radio wifi on>/dev/null
+		echo "--[Restarting Network-Manager completed]"
+		echo "--[New check in 120 seconds]"
 	fi
 	sleep 120s>/dev/null
 done
